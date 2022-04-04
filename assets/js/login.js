@@ -33,7 +33,8 @@ $(function () {
         $.post('http://www.liulongbin.top:3007/api/login', {username: $(".login-page [name=myname]").val(), password: $(".login-page [name=mypassword]").val()}, function (res) {
             if(res.status !== 0){ return layer.msg(res.message);}
             layer.msg(res.message);
-            localStorage.setItem('token',res.token)
+            localStorage.setItem('token',res.token);
+            location.href = '/index.html';
         })
     })
     // 注册提交
