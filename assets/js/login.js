@@ -20,7 +20,7 @@ $(function () {
             , '密码必须6到12位，且不能出现空格'
         ],
         repass: function (value) {
-            var pwd = $(".regbox-page    [name=mypassword]").val()
+            var pwd = $(".regbox-page [name=mypassword]").val()
             if (pwd !== value) {
                 return '两次密码输入必须一致';
             }

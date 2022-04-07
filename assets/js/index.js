@@ -15,6 +15,8 @@ function gteUser(){
             return
         }
         changeUser(res.data)
+        // console.log(res);
+        
      },
      complete:function(res){
          if(res.responseJSON.status !==0){
@@ -42,7 +44,7 @@ $(".uesrout").on('click',function(){
 function changeUser(arr){
     // 渲染名称
     var name = arr.nickname || arr.username;
-    $("#user-name").html(name);
+    $("#user-name").html('欢迎'+name);
 
     // 渲染头像
     if(arr.user_pic !==null){
